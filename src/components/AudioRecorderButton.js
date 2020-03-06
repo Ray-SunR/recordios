@@ -34,19 +34,6 @@ class AudioRecorderButton extends React.Component {
       .getMp3()
       .then(([buffer, blob]) => {
         this.props.finishRecording(blob);
-        // const zip = new JSZip();
-        // zip.file('renchen.mp3', blob);
-        // zip.generateAsync({ type: 'blob' }).then(function(content) {
-        //   // see FileSaver.js
-        //   saveAs(content, 'example.zip');
-        // });
-        // const file = new File(buffer, 'me-at-thevoice.mp3', {
-        //   type: blob.type,
-        //   lastModified: Date.now(),
-        // });
-
-        // const player = new Audio(URL.createObjectURL(file));
-        // player.play();
       })
       .catch((e) => console.log(e));
   };
