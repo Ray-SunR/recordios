@@ -1,13 +1,120 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#oscilloscope-scrim {
+  height: 125px;
+  margin-top: -135px;
+}
+#oscilloscope-scrim #scrim {
+  height: inherit;
+  opacity: 0.4;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfIAAACBCAYAAAA7UDgLAAAKu2lDQ…tpG4FGoBFoBBqBR4ZAL+SPzCFtTiPQCDQCjUAjsAeB/w94fiklsbypVwAAAABJRU5ErkJggg==);
+  background-repeat: repeat;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.oscilloscope {
+  margin-bottom: 20px;
+}
+
+body {
+  margin: 0;
+  background-color: #212121;
+  font-family: 'Asap', sans-serif;
+}
+
+body li {
+  list-style-type: none;
+  list-style-position: outside;
+}
+body ul {
+  margin: 0;
+  padding: 0;
+}
+
+#mainContent {
+  height: 100%;
+}
+
+#container {
+  height: 100%;
+}
+
+#bottomBar {
+  position: fixed;
+  bottom: 0;
+  background-color: #424242;
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  z-index: 1100;
+}
+
+#recordButton {
+  color: #fff;
+  background-color: rgb(245, 0, 87);
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  min-width: 0;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+  margin: auto;
+  margin-top: -30px;
+}
+
+.recordItem {
+  padding: 20px;
+  position: relative;
+  display: block;
+}
+
+.title {
+  color: #0096ef;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.dateTime {
+  color: #d4d2d2;
+  font-size: 15px;
+}
+
+.duration {
+  margin-bottom: 25px;
+  color: #d4d2d2;
+  font-size: 15px;
+}
+
+.size {
+  color: #d4d2d2;
+  font-size: 15px;
+}
+
+.audioPlayerContainer {
+  text-align: center;
+}
+
+.metadataContainer {
+  text-align: right;
+}
+
+#downloadButtonContainer {
+  width: 100%;
+  text-align: right;
+}
+
+#recordListInfoText {
+  height: 100%;
+  width: 37%;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  top: 175px;
+  color: white;
+}
+
+#placeHolderItem {
+  width: 100%;
+  height: 83px;
+  display: block;
 }

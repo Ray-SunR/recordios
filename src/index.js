@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Root from './Root';
+import AppContainer from './containers/AppContainer';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Container from '@material-ui/core/Container';
+import AppBarContainer from './containers/AppBarContainer';
+import BottomNavigation from './components/BottomNav';
+ReactDOM.render(
+  <Root>
+    <AppBarContainer />
+    <Container maxWidth={false} disableGutters={true}>
+      <AppContainer />
+    </Container>
+    <BottomNavigation />
+  </Root>,
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+  document.getElementById('root')
+);
